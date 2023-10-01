@@ -9,3 +9,8 @@ Start app
 ```shell
 npm start
 ```
+Install dependencies
+```shell
+npm install
+npm i
+```
