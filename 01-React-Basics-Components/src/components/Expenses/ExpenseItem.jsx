@@ -4,9 +4,9 @@ import ExpenseDate from './ExpenseDate';
 
 function ExpenseItem(props){
     
-    // const expenseDate = new Date(2021,3,28);
-    // const expenseTitle = "Car insurance";
-    // const expenseAmount = 293.01;
+    const clickHandler = () => {
+        console.log("clicker")
+    }
 
     return (
     <Card className='expense-item'>
@@ -14,8 +14,14 @@ function ExpenseItem(props){
         <div className='expense-item__description'>
             <h2>{props.title}</h2>
             <div className='expense-item__price'>${props.amount}</div>
-        </div>
+            {/* don't use clickerHandler() as it will execute the function upon parsing the code */}
+            <button onClick={clickHandler}>Change title</button>
+        </div>        
     </Card>
     );
 }
+
+
+
+
 export default ExpenseItem
