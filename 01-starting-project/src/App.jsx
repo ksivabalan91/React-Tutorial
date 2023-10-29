@@ -1,10 +1,11 @@
 // import the image into the file
 import reactImg from './assets/react-core-concepts.png'
+import componentImg from "./assets/components.png"
 
-const reactDescriptions = ['Fundamental','Crucial','Core'];
+const reactDescriptions = ['Fundamental', 'Crucial', 'Core'];
 
-function getRandomInt(max){
-  return (Math.floor(Math.random()*(max+1)))
+function getRandomInt(max) {
+  return (Math.floor(Math.random() * (max + 1)))
 }
 
 function Header() {
@@ -20,14 +21,44 @@ function Header() {
     </header>
   )
 }
+
+function CoreConcept(props) {
+  return (
+    <li>
+      <img src={props.img} alt="" />
+      <h3>{props.title}</h3>
+      <p>{props.description}</p>
+    </li>
+  );
+}
+
 function App() {
   return (
     <div>
       {/* You can use the following </> syntax if there is no additional classes and 
       chilren inside the tag*/}
-      <Header/>
+      <Header />
       <main>
-        <h2>Time to get started!</h2>
+        <section id="core-concepts">
+          <h2>Core Concepts</h2>
+          <ul>
+            <CoreConcept 
+            title="Components" 
+            description="the core UI building blocks"
+            img={componentImg}
+            />
+            <CoreConcept 
+            title="Components" 
+            description="the core UI building blocks"
+            img={componentImg}
+            />
+            <CoreConcept 
+            title="Components" 
+            description="the core UI building blocks"
+            img={componentImg}
+            />
+          </ul>
+        </section>
       </main>
     </div>
   );
