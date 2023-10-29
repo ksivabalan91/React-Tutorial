@@ -20,23 +20,26 @@ export default function ExpenseForm() {
             date: new Date(event.target.date.value)
         };
         console.log(expenseData)
+        setEnteredTitle('')
+        setEnteredAmount('')
+        setEnteredDate('')
     };
-    
+
 
     return (
         <form onSubmit={submitHandler}>
             <div className='new-expense__controls'>
                 <div className='new-expense__control'>
                     <label htmlFor="">Title</label>
-                    <input value={enteredTitle} type="text" onChange={titleChangeHandler} id='title'/>
+                    <input value={enteredTitle} type="text" onChange={titleChangeHandler} id='title' />
                 </div>
                 <div className='new-expense__control'>
                     <label htmlFor="">Amount</label>
-                    <input value={enteredAmount} type="number" min="0.01" step="0.01" onChange={amountChangeHandler} id='amount'/>
+                    <input value={enteredAmount} type="number" min="0.01" step="0.01" onChange={amountChangeHandler} id='amount' />
                 </div>
                 <div className='new-expense__control'>
                     <label htmlFor="">Date</label>
-                    <input value={enteredDate} type="date" min="2019-01-01" max="2022-12-31" onChange={dateChangeHandler} id='date'/>
+                    <input value={enteredDate} type="date" min="2019-01-01" max="2022-12-31" onChange={dateChangeHandler} id='date' />
                 </div>
                 <div className='new-expense__actions'>
                     <button type="submit">Add Expense</button>
