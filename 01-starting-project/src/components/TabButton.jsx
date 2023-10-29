@@ -1,8 +1,5 @@
-export default function TabButton(props) {
-
-    function handleClick(){
-        console.log('hello world')
-    }
+// children is  built-in, pass in a function prop to handle clicks
+export default function TabButton({ children, onSelect }) {
 
     // children prop refers to the content between you tags
     return (
@@ -10,7 +7,7 @@ export default function TabButton(props) {
             {/* add event listener to handle click events */}
             {/* u need to pass in a function to handle the click */}
             {/* If you using "handleClick()" it will run the function upon loading the page */}
-            <button onClick={handleClick}>{props.children}</button>
+            <button onClick={onSelect}>{children}</button>
         </li>
     )
 }

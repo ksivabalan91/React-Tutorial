@@ -5,6 +5,9 @@ import CoreConcept from './components/CoreConcept.jsx';
 import TabButton from './components/TabButton.jsx';
 
 function App() {
+  function handleSelect(){
+    console.log("text")
+  }
   return (
     <div>
       {/* You can use the following </> syntax if there is no additional classes and 
@@ -23,11 +26,12 @@ function App() {
           </ul>
         </section>
         <section id='examples'>
+          {/* pass in a function to handle on click events in our custom component */}
           <menu>
-            <TabButton>Components</TabButton>
-            <TabButton>JSX</TabButton>
-            <TabButton>Props</TabButton>
-            <TabButton>State</TabButton>
+            <TabButton onSelect={handleSelect}>Components</TabButton>
+            <TabButton onSelect={handleSelect}>JSX</TabButton>
+            <TabButton onSelect={handleSelect}>Props</TabButton>
+            <TabButton onSelect={handleSelect}>State</TabButton>
           </menu>
         </section>
       </main>
