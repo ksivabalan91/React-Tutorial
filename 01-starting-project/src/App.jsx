@@ -24,10 +24,10 @@ function App() {
         </section>
         <section id='examples'>
           <menu>
-            <TabButton>Child1</TabButton>
-            <TabButton>Child2</TabButton>
-            <TabButton>Child3</TabButton>
-            <TabButton>Child4</TabButton>
+            <TabButton>Components</TabButton>
+            <TabButton>JSX</TabButton>
+            <TabButton>Props</TabButton>
+            <TabButton>State</TabButton>
           </menu>
         </section>
       </main>
